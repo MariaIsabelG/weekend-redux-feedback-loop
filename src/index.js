@@ -8,19 +8,21 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
-const feedback = {
-    feeling:'',
-    understanding: 0,
-    supported:0,
-    comments:'',
-}
+const feedback = [
+        {feeling:''}, 
+        {understanding: 0},
+        {supported:0},
+        {comments:''},
+    ];
 
 const studentReducer = ( state = feedback, action) => {
 
     switch (action.type) {
 
         case 'FEELING':
-            return [...feedback, action.payload.feeling]
+            console.log (' This is feedback', feedback)
+            return action.payload
+            
         
         default:
             return state
