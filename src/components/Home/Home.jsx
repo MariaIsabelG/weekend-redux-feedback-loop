@@ -1,4 +1,14 @@
+import {useHistory} from 'react-router-dom';
+
 function Home (){
+
+    const history = useHistory();
+
+    const handleClick = () => {
+
+        history.push('/feeling');
+
+    }
 
     return(
 
@@ -8,7 +18,7 @@ function Home (){
             <h4>Don't forget it!</h4>
         </header>
 
-        <button>Start Feedback</button>
+        <button onClick={handleClick}>Start Feedback</button>
 
         </>
     )
