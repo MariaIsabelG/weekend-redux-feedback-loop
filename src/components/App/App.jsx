@@ -39,10 +39,6 @@ function App() {
         <Route path='/review' exact>
           <Review />
         </Route>
-
-    
-  
-
     </div>
     </Router>
   );
