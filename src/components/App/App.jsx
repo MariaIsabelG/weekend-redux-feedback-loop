@@ -7,6 +7,7 @@ import Understanding from '../FeedbackForm/Understanding'
 import Feeling from '../FeedbackForm/Feeling';
 import Support from '../FeedbackForm/Support';
 import Comments from '../FeedbackForm/Comments';
+import Review from '../FeedbackForm/Review';
 
 
 function App() {
@@ -33,6 +34,10 @@ function App() {
 
         <Route path='/comments' exact>
           <Comments />
+        </Route>
+
+        <Route path='/review' exact>
+          <Review />
         </Route>
 
     

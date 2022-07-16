@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
-const feedback = [{}];
+const feedback = [];
 
 const studentReducer = ( state = feedback, action) => {
 
@@ -24,22 +24,13 @@ const studentReducer = ( state = feedback, action) => {
         case 'SUPPORT':
             return [...state, action.payload];
         
-            
+        case 'COMMENTS':
+            return [...state, action.payload];    
         
         default:
             return state
     }
     }
-
-
-
-
-
-
-
-
-
-
 
 const storeInstance = createStore(
     combineReducers({
