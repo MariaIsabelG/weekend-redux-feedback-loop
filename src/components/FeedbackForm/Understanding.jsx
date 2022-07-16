@@ -28,7 +28,7 @@ function Understanding (){
                 <h1 className='App-title'>How well do you undertand today's content?</h1>
                 <h4>Please select from below.</h4>
             </header>
-            <form onSubmit={(event) => handleSubmit(event)}>
+            <div onClick={(event) => handleSubmit(event)}>
                 {/* onChange={(event) => setUnderstanding(event.target.value)}> */}
                 <div className="radioBtns">
                     <label>
@@ -48,7 +48,7 @@ function Understanding (){
                     </label> 
                 </div>
                 <button  type="button" className="submitBtn">NEXT</button>
-            </form>
+            </div>
 
         </>
 

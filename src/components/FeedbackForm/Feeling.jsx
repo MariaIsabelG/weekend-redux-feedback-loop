@@ -3,10 +3,8 @@ import {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 
 
-
 function Feeling (){
 
-    //const feedback = useSelector( store => store.studentReducer);
     const history = useHistory();
     const dispatch = useDispatch();
     
@@ -31,7 +29,7 @@ function Feeling (){
                 <h1 className='App-title'>How are you feeling today?</h1>
                 <h4>Please select a feeling.</h4>
             </header>
-            <form onSubmit={(event) => handleSubmit(event)}
+            <form onClick={(event) => handleSubmit(event)}
                     onChange={(event) => setFeeling(event.target.value)}>
                 <div className="radioBtns">
                     <label>
@@ -50,7 +48,7 @@ function Feeling (){
                 <input type="radio" value="Fabulous" name="feeling"/>Fabulous
                     </label> 
                 </div>
-                <button type="submit" className="submitBtn">NEXT</button>
+                <button type="feelingBtn" className="submitBtn">NEXT</button>
             </form>
 
         </>

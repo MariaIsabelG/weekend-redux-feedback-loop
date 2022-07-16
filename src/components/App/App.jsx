@@ -3,8 +3,8 @@ import axios from 'axios';
 import './App.css';
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import Home from '../Home/Home';
-import Understanding from '../FeedbackFrom/Understanding'
-import Feeling from '../FeedbackFrom/Feeling';
+import Understanding from '../FeedbackForm/Understanding'
+import Feeling from '../FeedbackForm/Feeling';
 
 
 function App() {
@@ -25,7 +25,6 @@ function App() {
           <Understanding />
         </Route>
 
-        <FeedbackForm />
     
   
 
