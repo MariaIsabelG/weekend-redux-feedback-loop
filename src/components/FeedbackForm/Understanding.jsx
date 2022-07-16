@@ -4,10 +4,10 @@ import {useState} from 'react';
 
 function Understanding (){
 
+    const dispatch = useDispatch();
+
     const [understanding, setUnderstanding] = useState(0);
 
-    // const dispatch = useDispatch();
-    
     const handleSubmit = (event) => {
 
         event.preventDefault();
@@ -16,7 +16,7 @@ function Understanding (){
             dispatch({
 
                 type: 'UNDERSTANDING',
-                payload: {understanding}
+                payload: understanding
             })
            // history.push('/understanding');
         } else { 
@@ -57,5 +57,3 @@ function Understanding (){
 };
 
 export default Understanding;
-
-// onClick={handleClick}

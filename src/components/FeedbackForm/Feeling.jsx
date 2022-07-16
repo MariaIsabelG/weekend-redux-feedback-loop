@@ -7,18 +7,20 @@ function Feeling (){
 
     const history = useHistory();
     const dispatch = useDispatch();
-    
-    const [feeling, setFeeling] = useState('');
 
+
+    let [ feeling, setFeeling] = useState( {} );
+    
     const handleSubmit = (event) => {
 
         event.preventDefault();
 
         if(feeling !== ''){
+            
             dispatch({
 
                 type: 'FEELING',
-                payload: {feeling}
+                payload: feeling
             })
             history.push('/understanding');
         } else { 
@@ -29,12 +31,12 @@ function Feeling (){
     return (
 
         <>
-            <header className='App-header'>
-                <h1 className='App-title'>How are you feeling today?</h1>
-                <h4>Please select a feeling.</h4>
-            </header>
-            <div onChange={(event) => setFeeling(event.target.value)}>
-                <div className="radioBtns" >
+                <header className='App-header'>
+                    <h1 className='App-title'>How are you feeling today?</h1>
+                    <h4>Please select a feeling.</h4>
+                </header>
+            <div>
+                <div className="radioBtns" onChange={(event) => setFeeling(event.target.value)}>
                     <label>
                         <input type="radio" value="horrible"  name="feeling" />Horrible
                     </label>

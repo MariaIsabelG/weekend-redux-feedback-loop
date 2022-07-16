@@ -8,10 +8,7 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
-const feedback = [{
-    feeling:'',
-    understanding: 0
-}];
+const feedback = [{}];
 
 const studentReducer = ( state = feedback, action) => {
 
@@ -22,7 +19,7 @@ const studentReducer = ( state = feedback, action) => {
             return [action.payload];
         
         case 'UNDERSTANDING':
-            return [action.payload];
+            return [...state, action.payload];
         
             
         
