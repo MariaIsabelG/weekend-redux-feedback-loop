@@ -1,11 +1,12 @@
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function Review (){
 
-    const response = useSelector(store => store.studentReducer);
+    const history = useHistory();
 
-    console.log('These are my responses', response);
+    const response = useSelector(store => store.studentReducer);
 
     const handleSubmit = event => {
 
@@ -16,7 +17,7 @@ function Review (){
         }).catch((error =>{
             console.log( 'Error in posting data', error);
         }))
-
+        history.push('/thanks');
     }
 
 

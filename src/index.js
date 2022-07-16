@@ -8,14 +8,11 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
-const feedback = [];
-
-const studentReducer = ( state = feedback, action) => {
+const studentReducer = ( state = [], action) => {
 
     switch (action.type) {
 
         case 'FEELING':
-            console.log (' This is feedback', feedback)
             return [action.payload];
         
         case 'UNDERSTANDING':
@@ -25,10 +22,15 @@ const studentReducer = ( state = feedback, action) => {
             return [...state, action.payload];
         
         case 'COMMENTS':
-            return [...state, action.payload];    
+            return [...state, action.payload];  
+            
+        case 'CLEAR':
+            return studentReducer;
         
         default:
             return state
+
+        
     }
     }
 

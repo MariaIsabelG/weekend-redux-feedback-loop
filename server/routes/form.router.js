@@ -2,12 +2,6 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
 
-// GET request
-router.get('/', (req, res) => {
-    res.send(console.log('Thanks for your feedback!'))
-
-})
-
 // POSTS request
 router.post('/', (req, res) => {
     const feedback = req.body;
