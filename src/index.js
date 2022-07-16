@@ -9,7 +9,8 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
 const feedback = [{
-    feeling:''
+    feeling:'',
+    understanding: 0
 }];
 
 const studentReducer = ( state = feedback, action) => {
@@ -20,6 +21,8 @@ const studentReducer = ( state = feedback, action) => {
             console.log (' This is feedback', feedback)
             return [action.payload];
         
+        case 'UNDERSTANDING':
+            return [action.payload];
         
             
         

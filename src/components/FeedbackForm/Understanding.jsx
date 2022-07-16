@@ -4,7 +4,7 @@ import {useState} from 'react';
 
 function Understanding (){
 
-    // const [understanding, setUnderstanding] = useState(0);
+    const [understanding, setUnderstanding] = useState(0);
 
     // const dispatch = useDispatch();
     
@@ -12,27 +12,29 @@ function Understanding (){
 
         event.preventDefault();
 
-        console.log('This is submitting the form')
+        if(understanding !== 0){
+            dispatch({
 
-        // dispatch({
-
-        //     type: 'UNDERSTANDING',
-        //     payload: {understanding}
-        // })
-    }
+                type: 'UNDERSTANDING',
+                payload: {understanding}
+            })
+           // history.push('/understanding');
+        } else { 
+            alert('Please select a level of understanding');
+        }
+    };
 
     return (
 
         <>
             <header className='App-header'>
                 <h1 className='App-title'>How well do you undertand today's content?</h1>
-                <h4>Please select from below.</h4>
+                <h4>1 = I dont understand 5 = I can teach the content</h4>
             </header>
-            <div onClick={(event) => handleSubmit(event)}>
-                {/* onChange={(event) => setUnderstanding(event.target.value)}> */}
-                <div className="radioBtns">
+            <div onChange={(event) => setUnderstanding(event.target.value)}>
+                <div className="radioBtns" >
                     <label>
-                        <input type="radio" value="1"  name="feeling"/>1
+                        <input type="radio" value="1"  name="feeling" />1
                     </label>
                     <label>
                         <input type="radio" value="2" name="feeling"/>2
@@ -47,9 +49,8 @@ function Understanding (){
                 <input type="radio" value="5" name="feeling"/>5
                     </label> 
                 </div>
-                <button  type="button" className="submitBtn">NEXT</button>
+                <button onClick={handleSubmit} className="submitBtn">NEXT</button>
             </div>
-
         </>
 
     )

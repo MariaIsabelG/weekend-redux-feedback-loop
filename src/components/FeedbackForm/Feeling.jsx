@@ -24,7 +24,6 @@ function Feeling (){
         } else { 
             alert('Please select a feeling');
         }
-  
     };
 
     return (
