@@ -15,7 +15,9 @@ function Review (){
             <p>Feeling: {response[0]}</p>
             <p>Understanding: {response[1]}</p>
             <p>Support: {response[2]}</p>
-            <p>Comments: {response[3]}</p> 
+            <p>Comments: {response[3]}</p>
+
+            <button>SUBMIT</button> 
         </div>
         </>
     )
@@ -23,3 +25,5 @@ function Review (){
 };
 
 export default Review;
+
+// LEFT OFF ---> Need to get data to the server to the db
