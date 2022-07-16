@@ -13,7 +13,7 @@ router.post('/', (req, res) => {
     const feedback = req.body;
 
     const queryText = `
-            INSET INTO "feedback" ("feeling", "understanding", "support", "comments")
+            INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
             VALUES ($1, $2, $3, $4);`;
     pool.query(queryText, [feedback[0], feedback[1], feedback[2], feedback[3]])
     .then((result) => {
@@ -24,4 +24,4 @@ router.post('/', (req, res) => {
     })
 });
 
-
+module.exports = router;

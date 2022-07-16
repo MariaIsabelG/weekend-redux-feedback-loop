@@ -9,13 +9,13 @@ function Feeling (){
     const dispatch = useDispatch();
 
 
-    let [ feeling, setFeeling] = useState( '' );
+    let [ feeling, setFeeling] = useState( 0 );
     
     const handleSubmit = (event) => {
 
         event.preventDefault();
 
-        if(feeling !== ''){
+        if(feeling !== 0){
             
             dispatch({
 
@@ -32,25 +32,25 @@ function Feeling (){
 
         <>
                 <header className='App-header'>
-                    <h1 className='App-title'>How are you feeling today?</h1>
-                    <h4>Please select a feeling.</h4>
+                    <h1 className='App-title'>How fabulous do you feel today?</h1>
+                    <h4>1 = Not at all 5 = Extra fabulous</h4>
                 </header>
             <div>
                 <div className="radioBtns" onChange={(event) => setFeeling(event.target.value)}>
                     <label>
-                        <input type="radio" value="horrible"  name="feeling" />Horrible
+                        <input type="radio" value="1"  name="feeling" />1
                     </label>
                     <label>
-                        <input type="radio" value="CouldBeBetter" name="feeling"/>Bad
+                        <input type="radio" value="2" name="feeling"/>2
                     </label>
                     <label>
-                        <input type="radio" value="Ok" name="feeling"/>Meh
+                        <input type="radio" value="3" name="feeling"/>3
                     </label>
                     <label>
-                        <input type="radio" value="Good" name="feeling"/>Good
+                        <input type="radio" value="4" name="feeling"/>4
                     </label>
                     <label>
-                <input type="radio" value="Fabulous" name="feeling"/>Fabulous
+                <input type="radio" value="5" name="feeling"/>5
                     </label> 
                 </div>
                 <button onClick={handleSubmit} className="submitBtn">NEXT</button>
