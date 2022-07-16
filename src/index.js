@@ -20,6 +20,9 @@ const studentReducer = ( state = feedback, action) => {
         
         case 'UNDERSTANDING':
             return [...state, action.payload];
+
+        case 'SUPPORT':
+            return [...state, action.payload];
         
             
         
