@@ -5,6 +5,8 @@ import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import Home from '../Home/Home';
 import Understanding from '../FeedbackForm/Understanding'
 import Feeling from '../FeedbackForm/Feeling';
+import Support from '../FeedbackForm/Support';
+import Comments from '../FeedbackForm/Comments';
 
 
 function App() {
@@ -23,6 +25,14 @@ function App() {
 
         <Route path='/understanding' exact>
           <Understanding />
+        </Route>
+
+        <Route path='/support' exact>
+          <Support />
+        </Route>
+
+        <Route path='/comments' exact>
+          <Comments />
         </Route>
 
     

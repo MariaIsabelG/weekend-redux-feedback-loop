@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from "react-redux"; 
 import {useState} from 'react';
-//import {useHistory} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 function Understanding (){
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const [understanding, setUnderstanding] = useState(0);
 
@@ -18,7 +19,8 @@ function Understanding (){
                 type: 'UNDERSTANDING',
                 payload: understanding
             })
-           // history.push('/understanding');
+
+            history.push('/support');
         } else { 
             alert('Please select a level of understanding');
         }

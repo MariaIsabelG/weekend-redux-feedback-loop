@@ -9,7 +9,7 @@ function Feeling (){
     const dispatch = useDispatch();
 
 
-    let [ feeling, setFeeling] = useState( {} );
+    let [ feeling, setFeeling] = useState( '' );
     
     const handleSubmit = (event) => {
 
