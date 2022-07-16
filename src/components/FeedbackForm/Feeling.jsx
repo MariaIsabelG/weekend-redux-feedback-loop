@@ -13,13 +13,18 @@ function Feeling (){
     const handleSubmit = (event) => {
 
         event.preventDefault();
-        dispatch({
 
-            type: 'FEELING',
-            payload: {feeling}
-        })   
-        
-        history.push('/understanding');
+        if(feeling !== ''){
+            dispatch({
+
+                type: 'FEELING',
+                payload: {feeling}
+            })
+            history.push('/understanding');
+        } else { 
+            alert('Please select a feeling');
+        }
+  
     };
 
     return (
@@ -29,11 +34,10 @@ function Feeling (){
                 <h1 className='App-title'>How are you feeling today?</h1>
                 <h4>Please select a feeling.</h4>
             </header>
-            <form onClick={(event) => handleSubmit(event)}
-                    onChange={(event) => setFeeling(event.target.value)}>
-                <div className="radioBtns">
+            <div onChange={(event) => setFeeling(event.target.value)}>
+                <div className="radioBtns" >
                     <label>
-                        <input type="radio" value="horrible"  name="feeling"/>Horrible
+                        <input type="radio" value="horrible"  name="feeling" />Horrible
                     </label>
                     <label>
                         <input type="radio" value="CouldBeBetter" name="feeling"/>Bad
@@ -48,9 +52,8 @@ function Feeling (){
                 <input type="radio" value="Fabulous" name="feeling"/>Fabulous
                     </label> 
                 </div>
-                <button type="feelingBtn" className="submitBtn">NEXT</button>
-            </form>
-
+                <button onClick={handleSubmit} className="submitBtn">NEXT</button>
+            </div>
         </>
 
     )
