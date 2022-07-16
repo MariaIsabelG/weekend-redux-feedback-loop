@@ -3,27 +3,31 @@ import axios from 'axios';
 import './App.css';
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import Home from '../Home/Home';
-import Feeling from '../Feeling/Feeling';
-import Understanding from '../Understanding/Understanding';
+import Understanding from '../FeedbackFrom/Understanding'
+import Feeling from '../FeedbackFrom/Feeling';
 
 
 function App() {
 
   return (
     <Router>
-    <div className='App'>
+      <div className='App'>
 
-    <Route path='/' exact>
-      <Home />
-    </Route>
+        <Route path='/' exact>
+          <Home />
+        </Route>
 
-    <Route path='/feeling'>
-      <Feeling />
-    </Route>
+      <Route path='/feeling' exact>
+          <Feeling />
+        </Route>
 
-    <Route path='/understanding'>
-      <Understanding />
-    </Route>
+        <Route path='/understanding' exact>
+          <Understanding />
+        </Route>
+
+        <FeedbackForm />
+    
+  
 
     </div>
     </Router>

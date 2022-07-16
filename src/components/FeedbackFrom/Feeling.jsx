@@ -19,13 +19,10 @@ function Feeling (){
 
             type: 'FEELING',
             payload: {feeling}
-        })       
-    };
-
-    const handleClick = () => {
-
+        })   
+        
         history.push('/understanding');
-    }
+    };
 
     return (
 
@@ -53,7 +50,7 @@ function Feeling (){
                 <input type="radio" value="Fabulous" name="feeling"/>Fabulous
                     </label> 
                 </div>
-                <button onClick={handleClick} type="submit" className="submitBtn">NEXT</button>
+                <button type="submit" className="submitBtn">NEXT</button>
             </form>
 
         </>
