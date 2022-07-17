@@ -51,7 +51,7 @@ function Understanding (){
                 <input type="radio" value="5" name="feeling"/>5
                     </label> 
                 </div>
-                <button onClick={handleSubmit} className="submitBtn">NEXT</button>
+                <button onClick={handleSubmit} className="btn">NEXT</button>
             </div>
         </>
 

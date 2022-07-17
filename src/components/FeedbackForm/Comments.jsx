@@ -32,7 +32,7 @@ function Support (){
             <div onChange={(event) => setComments(event.target.value)}>
                 <input type="text" className="comments" placeholder="Enter Comment"/>
             </div>
-                <button onClick={handleSubmit} className="submitBtn">NEXT</button>
+                <button onClick={handleSubmit} className="btn">NEXT</button>
         </>
 
     )

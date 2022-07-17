@@ -18,7 +18,7 @@ function Home (){
             <h4>Don't forget it!</h4>
         </header>
 
-        <button onClick={handleClick}>Start Feedback</button>
+        <button className="btn" onClick={handleClick}>Start Feedback</button>
 
         </>
     )
